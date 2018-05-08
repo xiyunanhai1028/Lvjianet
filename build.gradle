@@ -1,0 +1,74 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    // SDK
+    ext.compile_sdk_version = 27
+    ext.min_sdk_version = 19
+    ext.target_sdk_version = 27
+
+    // V7
+    ext.android_support_version = "27.1.1"
+
+    // Butter Knife
+    ext.butterknife_version = "8.4.0"
+
+    // RxJava and RxAndroid
+    ext.rx_java_version = '2.1.12'
+    ext.rx_android_version = '2.0.2'
+
+    // RxLifecycle
+    ext.rx_lifecycle_version = '2.2.1'
+
+    // Retrofit and OkHttp
+    ext.ok_http_version = '3.10.0'
+    ext.retrofit_version = '2.4.0'
+
+    // Dagger2
+    ext.dagger_version = '2.15'
+
+    // Glide
+    ext.glide_version = "3.7.0"
+
+    // EventBus
+    ext.eventbus_version = "3.1.1"
+
+    // EasyPermissions
+    ext.easypermissions_version = "1.2.0"
+
+    // AndroidAutoLayout
+    ext.android_autolayout_version = "1.4.5"
+
+    // ImmersionBar
+    ext.immersionbar_version = "2.3.0"
+
+    // ARouter
+    ext.arouter_api_version = '1.3.1'
+    ext.arouter_compiler_version = '1.1.4'
+
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+//        classpath 'com.android.tools.build:gradle:3.1.2'
+        classpath 'com.android.tools.build:gradle:3.0.1'
+//        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
+        classpath "com.jakewharton:butterknife-gradle-plugin:$butterknife_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
